@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bài giảng JavaScript</title>
+    <style>
+        #date {
+            width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            background: yellow;
+            color: white;
+            padding: 20px;
+            font-family: arial;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="date"></div>
+    <script>
+        var d = new Date();
+        var ngay = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];
+
+        var thang = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+        document.getElementById("date").innerHTML = "Hôm nay, " + ngay[d.getDay()] + " ngày " + d.getDate() + " tháng " + thang[d.getMonth()] + " năm " + d.getFullYear();
+    </script>
+
+<!--Hiển thị ngày giờ-->
+<script language='javascript'>
+var myVar=setInterval(function(){Clock()},1000);
+function Clock() {
+a=new Date();
+w=Array("Chủ Nhật","Thứ hai","Thứ ba","Thứ tư","Thứ năm","Thứ sáu","Thứ bảy");
+var a=w[a.getDay()],
+w=new Date,
+d=w.getDate();
+m=w.getMonth()+1;
+y=w.getFullYear();
+h=w.getHours();
+mi=w.getMinutes();
+se=w.getSeconds();
+if(10>d){d="0"+d}
+if(10>m){m="0"+m}
+if(10>h){h="0"+h}
+if(10>mi){mi="0"+mi}
+if(10>se){se="0"+se}
+document.getElementById("clockDiv").innerHTML="Hôm nay: "+a+", "+d+" / "+m+" / "+y+" - "+h+":"+mi+":"+se+"";
+}
+</script>
+
+</body>
+</html>

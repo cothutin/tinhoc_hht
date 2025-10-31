@@ -1,0 +1,31 @@
+p<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số Lượt Truy Cập</title>
+</head>
+<body>
+    <h1>Chào mừng bạn đến với trang web của chúng tôi!</h1>
+    <p>Số lượt truy cập trang: <span id="counter"></span></p>
+
+    <script>
+        // Lấy số lượt truy cập từ Local Storage
+        let count = localStorage.getItem('page_view_count');
+        
+        // Nếu chưa có, đặt giá trị bắt đầu là 0
+        if (count === null) {
+            count = 0;
+        }
+        
+        // Tăng số lượt truy cập mỗi khi tải trang
+        count++;
+        
+        // Lưu lại số lượt truy cập mới vào Local Storage
+        localStorage.setItem('page_view_count', count);
+        
+        // Hiển thị số lượt truy cập
+        document.getElementById('counter').textContent = count;
+    </script>
+</body>
+</html>

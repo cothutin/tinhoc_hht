@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(imager_4_53459_700.jpg) no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.box-menu {
+    background-color: darkcyan;
+    text-align: center;
+}
+
+.box-menu ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+
+.box-menu ul li {
+    width: 145px;
+    margin: 5px;
+    padding: 15px;
+}
+.box-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.active, .box-menu ul li:hover {
+    background: #3406D1;
+    border-radius: 3px;
+}
+
+.box-menu .fa {
+    margin-right: 5px;
+}
+
+.box-submenu {
+    display: none;
+}

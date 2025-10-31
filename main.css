@@ -1,0 +1,26 @@
+
+body 
+{
+  background:url(color:blueviolet);
+}
+
+.l1
+	{
+		background-color: yellow;
+		text-align: center;
+		color: red;
+	}
+
+.le
+	{
+		background-color: blueviolet;
+		text-align: center;
+		color: rgb(0, 255, 200);
+	
+	}
+#para3{
+	background-color: rgb(22, 207, 22);	color: hsl(19, 100%, 50%);
+	}
+h3{
+		text-shadow: 5px 5px 05px grey;
+	}

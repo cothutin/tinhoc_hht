@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiệu ứng Ảnh Xuất Hiện Lần Lượt</title>
+    <style>
+        /* Định dạng cho khung ảnh */
+        .image-frame {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Định dạng cho ảnh */
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        /* Ảnh hiện tại sẽ có opacity 1 */
+        .image-frame img.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ảnh Hiện Lần Lượt</h1>
+    <div class="image-frame">
+        <img src="./image/cothutin.png" height="350" width="350" class="active">
+        <img src="./image/2.png" height="350" width="350">
+        <img src="./image/logohht.jpg" height="350" width="350">
+        <img src="./image/e2.png" height="350" width="350">
+        <img src="./image/e3.png" height="350" width="350">
+    </div>
+
+    <script>
+        // Lấy tất cả ảnh trong khung
+        const images = document.querySelectorAll('.image-frame img');
+        let currentIndex = 0;
+
+        // Hàm để chuyển sang ảnh tiếp theo
+        function showNextImage() {
+            // Xóa lớp 'active' khỏi ảnh hiện tại
+            images[currentIndex].classList.remove('active');
+
+            // Tăng chỉ số ảnh, nếu quá số ảnh sẽ quay lại ảnh đầu tiên
+            currentIndex = (currentIndex + 1) % images.length;
+
+            // Thêm lớp 'active' vào ảnh mới
+            images[currentIndex].classList.add('active');
+        }
+
+        // Đặt thời gian thay đổi ảnh (3000ms = 3 giây)
+        setInterval(showNextImage, 3000);
+    </script>
+
+</body>
+</html>

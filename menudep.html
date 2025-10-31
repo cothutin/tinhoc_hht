@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tin học THPT 2018</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #fff;
+    }
+    /* Thanh menu chính */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px 40px;
+    }
+    .logo {
+      font-weight: bold;
+      color: #1e50d3;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .logo::before {
+      content: "🎓";
+      font-size: 22px;
+      margin-right: 8px;
+    }
+    .menu {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+    .menu li {
+      position: relative;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #1e50d3;
+      font-weight: 600;
+    }
+    .menu a:hover {
+      color: #0033cc;
+    }
+    /* Menu con */
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      border-radius: 6px;
+      min-width: 160px;
+      padding: 10px 0;
+      z-index: 10;
+    }
+    .submenu a {
+      display: block;
+      padding: 8px 20px;
+      color: #333;
+      font-weight: normal;
+    }
+    .submenu a:hover {
+      background-color: #f5f5f5;
+      color: #1e50d3;
+    }
+    .menu li:hover .submenu {
+      display: block;
+    }
+
+    /* Nội dung */
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .content h1 {
+      color: #1e50d3;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .content p {
+      font-size: 18px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Tin học THPT 2018</div>
+    <ul class="menu">
+      <li><a href="#">Giới thiệu</a></li>
+      <li><a href="#">Cấu trúc</a></li>
+      <li>
+        <a href="#">Danh mục ▼</a>
+        <div class="submenu">
+          <a href="#">🖥️ Tin học 10</a>
+          <a href="#">💾 Tin học 11</a>
+          <a href="#">🎓 Tin học 12</a>
+        </div>
+      </li>
+      <li><a href="#">Năng lực</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1>💡 Giới thiệu chung</h1>
+    <p>Chương trình Tin học THPT 2018 được thiết kế nhằm phát triển năng lực và tư duy tính toán cho học sinh.</p>
+  </div>
+</body>
+</html>

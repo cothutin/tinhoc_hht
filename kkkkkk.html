@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<audio autoplay controls >
+  <source src="./music/at1.pm3" type="audio/pm3">
+  <source src="./music/at2.mp4" type="audio/mp4">
+CHÈN NHẠC VÀO WEB.
+</audio>
+<marquee id="marq" scrollamount="3" direction="up" loop="50" scrolldelay="0" onmouseover="this.stop()" onmouseout="this.start()">
+<a href="Link"><img src="./image/bt12.png" title="Ghi chú cho ảnh" width="200" height="300"/> </a>
+</marquee>
+<div class="row mb">
+                  <div class="boxtitle">LƯỢT TRUY CẬP</div>
+                  <div style="text-align:center;"> </div>
+                  <h1>
+                     <?php
+                        if(isset($_SECCION['luottruycap'])) echo $_SECCION[luottruycap]
+
+                     ?>
+                  </h1>
+               </div>
+<?php
+include("dem.php");
+?>
+
+</body>
+</html>
+
